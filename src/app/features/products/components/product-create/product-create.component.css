@@ -1,0 +1,133 @@
+/* ————— Página ————— */
+body {
+  background: #f4f6f9;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ————— Contenedor del formulario ————— */
+.form-container {
+  background: #fff;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.form-container h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #0f265c;
+}
+.form-container h2 + hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 1.5rem 0;
+}
+
+/* ————— Grid de campos ————— */
+.form-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+}
+.row label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+.row input,
+.row textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.row textarea {
+  resize: vertical;
+  min-height: 4rem;
+}
+
+/* ————— Estados de error ————— */
+.row input.ng-invalid.ng-touched,
+.row textarea.ng-invalid.ng-touched,
+.row input.ng-invalid.ng-dirty,
+.row textarea.ng-invalid.ng-dirty {
+  border-color: #f44336;
+}
+.error {
+  color: #f44336;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* ————— Botones ————— */
+.actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.btn-reset,
+.btn-submit {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-reset {
+  background: #eaecf2;
+  color: #0f265c;
+  font-weight: bold;
+}
+.btn-reset:hover {
+  background: #e6eaf7;
+}
+.btn-submit {
+  background: #ffdb01;
+  color: #0f265c;
+  font-weight: bold;
+}
+.btn-submit:hover {
+  background: #ffca00;
+}
+
+.btn-submit[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedback {
+  text-align: center;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.feedback.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+.feedback.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* ————— Responsive móvil ————— */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 1rem;
+  }
+  .form-container form {
+    grid-template-columns: 1fr;
+  }
+}

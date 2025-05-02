@@ -67,7 +67,8 @@
               "browserTarget": "cramos-ntt-data-app:build:production"
             },
             "development": {
-              "browserTarget": "cramos-ntt-data-app:build:development"
+              "browserTarget": "cramos-ntt-data-app:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -77,25 +78,11 @@
           "options": {
             "browserTarget": "cramos-ntt-data-app:build"
           }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
-          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

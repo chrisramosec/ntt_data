@@ -1,0 +1,84 @@
+<div class="header-paginator">
+  <input
+    type="text"
+    class="search-bar"
+    placeholder="Search..."
+    [(ngModel)]="searchTerm"
+    (input)="applyFilter()"
+  />
+
+  <button class="add-button" (click)="goToAddProduct()">Agregar</button>
+</div>
+
+<div class="content-paginator">
+  <div class="paginator">
+    <table>
+      <thead>
+        <tr>
+          <th>Logo</th>
+          <th>Nombre del producto</th>
+          <th>
+            Descripción
+            <span
+              class="info-icon"
+              data-tooltip="Información sobre la descripción"
+              >i</span
+            >
+          </th>
+          <th>
+            Fecha de liberación
+            <span
+              class="info-icon"
+              data-tooltip="Información sobre la fecha de liberación"
+              >i</span
+            >
+          </th>
+          <th>
+            Fecha de reestructuración
+            <span
+              class="info-icon"
+              data-tooltip="Información sobre la fecha de reestructuración"
+              >i</span
+            >
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of paginatedProducts">
+          <td>
+            <div class="logo">{{ getInitials(product.name) }}</div>
+          </td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.date_release }}</td>
+          <td>{{ product.date_revision }}</td>
+          <td class="actions-cell">
+            <div class="dropdown" (click)="toggleDropdown(product.id)">
+              <span class="ellipsis">⋮</span>
+              <ul *ngIf="openedDropdownId === product.id" class="dropdown-menu">
+                <li (click)="onEdit(product)">Editar</li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="footer-paginator">
+  <span class="dark-text">{{ filteredProducts.length }} Resultados</span>
+  <select (change)="onSizeChange($event)">
+    <option [selected]="size === 5">5</option>
+    <option [selected]="size === 10">10</option>
+    <option [selected]="size === 20">20</option>
+  </select>
+</div>
+
+<!-- <div class="pagination-controls">
+  <button (click)="prevPage()">Anterior</button>
+  <span>Página {{ page }}</span>
+  <button (click)="nextPage()">Siguiente</button>
+</div> -->

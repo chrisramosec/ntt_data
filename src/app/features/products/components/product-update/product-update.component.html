@@ -1,0 +1,65 @@
+<div class="form-container">
+  <h2>Editar Producto</h2>
+  <hr />
+
+  <div *ngIf="feedbackMessage" class="feedback" [ngClass]="feedbackClass">
+    {{ feedbackMessage }}
+  </div>
+
+  <form #prodForm="ngForm" (ngSubmit)="onSubmit(prodForm)" novalidate>
+
+    <div class="row">
+      <label for="id">ID</label>
+      <input id="id" name="id" type="text" [(ngModel)]="product.id" disabled/>
+    </div>
+
+    <div class="row">
+      <label for="name">Nombre</label>
+      <input id="name" name="name" type="text" [(ngModel)]="product.name" required minlength="5" maxlength="100" #nameCtrl="ngModel" [ngModelOptions]="{ updateOn: 'blur' }"/>
+      <div *ngIf="nameCtrl.invalid && (nameCtrl.touched || prodForm.submitted)" class="error">
+        <span *ngIf="nameCtrl.errors?.['required']">Nombre es requerido.</span>
+        <span *ngIf="nameCtrl.errors?.['minlength']">Mínimo 5 caracteres.</span>
+        <span *ngIf="nameCtrl.errors?.['maxlength']">Máximo 100 caracteres.</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="description">Descripción</label>
+      <input id="description" name="description" type="text" [(ngModel)]="product.description" required minlength="10" maxlength="200" #descCtrl="ngModel" [ngModelOptions]="{ updateOn: 'blur' }"/>
+      <div *ngIf="descCtrl.invalid && (descCtrl.touched || prodForm.submitted)" class="error">
+        <span *ngIf="descCtrl.errors?.['required']">Descripción es requerida.</span>
+        <span *ngIf="descCtrl.errors?.['minlength']">Mínimo 10 caracteres.</span>
+        <span *ngIf="descCtrl.errors?.['maxlength']">Máximo 200 caracteres.</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="logo">Logo</label>
+      <input id="logo" name="logo" type="text" [(ngModel)]="product.logo" required #logoCtrl="ngModel" [ngModelOptions]="{ updateOn: 'blur' }"/>
+      <div *ngIf="logoCtrl.invalid && (logoCtrl.touched || prodForm.submitted)" class="error">
+        <span *ngIf="logoCtrl.errors?.['required']">Logo es requerido.</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="date_release">Fecha Liberación</label>
+      <input id="date_release" name="date_release" type="date" [(ngModel)]="product.date_release" required [min]="todayDateString" #releaseCtrl="ngModel" (ngModelChange)="onReleaseDateChange($event)"/>
+      <div *ngIf="releaseCtrl.invalid && (releaseCtrl.touched || prodForm.submitted)" class="error">
+        <span *ngIf="releaseCtrl.errors?.['required']">Fecha es requerida.</span>
+        <span *ngIf="releaseCtrl.errors?.['min']">No puede ser antes de hoy.</span>
+      </div>
+    </div>
+
+    <div class="row">
+      <label for="date_revision">Fecha Revisión</label>
+      <input id="date_revision" name="date_revision" type="date" [(ngModel)]="product.date_revision" disabled/>
+    </div>
+
+    <div class="actions">
+      <button type="button" class="btn-reset" (click)="resetForm(prodForm)">Reiniciar</button>
+      <button type="submit" class="btn-submit" [disabled]="prodForm.invalid || !product.date_revision">Guardar</button>
+    </div>
+
+  </form>
+
+</div>

@@ -1,18 +1,30 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/spec",
-    "types": [
-      "jasmine"
-    ]
+      "baseUrl": "./src",
+      "outDir": "./out-tsc/spec",
+      "types": [
+          "jest", //cambiar esta línea de jasmine a jest
+          "node"
+      ],
+      "experimentalDecorators": true, // agregar
+      "emitDecoratorMetadata": true, // agregar
+      "paths": { // esta sección es en caso de que uses paths
+          "@app/*": [
+              "app/*"
+          ],
+          "@env/*": [
+              "environments/*"
+          ]
+      }
   },
-  "files": [
-    "src/test.ts",
-    "src/polyfills.ts"
+  "files": [ // eliminar la referencia a test.ts ya que lo eliminamos
+      "src/polyfills.ts",
+      "zone.js",
+      "zone.js/testing"
   ],
   "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+      "src/**/*.spec.ts",
+      "src/**/*.d.ts"
   ]
 }
