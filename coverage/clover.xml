@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1746226832674" clover="3.2.0">
-  <project timestamp="1746226832674" name="All files">
+<coverage generated="1746231845245" clover="3.2.0">
+  <project timestamp="1746231845245" name="All files">
     <metrics statements="105" coveredstatements="79" conditionals="13" coveredconditionals="8" methods="39" coveredmethods="29" elements="157" coveredelements="116" complexity="0" loc="105" ncloc="105" packages="5" files="7" classes="7"/>
     <package name="core.guards">
       <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <file name="auth.guard.ts" path="/home/chisto/Apps/Personal/Ntt Data/cramos-ntt-data-app/src/app/core/guards/auth.guard.ts">
+      <file name="auth.guard.ts" path="/home/chisto/Apps/Personal/Ntt Data/ntt_data/src/app/core/guards/auth.guard.ts">
         <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -15,7 +15,7 @@
     </package>
     <package name="core.interceptors">
       <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="api.interceptor.ts" path="/home/chisto/Apps/Personal/Ntt Data/cramos-ntt-data-app/src/app/core/interceptors/api.interceptor.ts">
+      <file name="api.interceptor.ts" path="/home/chisto/Apps/Personal/Ntt Data/ntt_data/src/app/core/interceptors/api.interceptor.ts">
         <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -25,11 +25,11 @@
     </package>
     <package name="features.products.components.product-table">
       <metrics statements="40" coveredstatements="28" conditionals="6" coveredconditionals="2" methods="15" coveredmethods="11"/>
-      <file name="product-table.component.html" path="/home/chisto/Apps/Personal/Ntt Data/cramos-ntt-data-app/src/app/features/products/components/product-table/product-table.component.html">
+      <file name="product-table.component.html" path="/home/chisto/Apps/Personal/Ntt Data/ntt_data/src/app/features/products/components/product-table/product-table.component.html">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="product-table.component.ts" path="/home/chisto/Apps/Personal/Ntt Data/cramos-ntt-data-app/src/app/features/products/components/product-table/product-table.component.ts">
+      <file name="product-table.component.ts" path="/home/chisto/Apps/Personal/Ntt Data/ntt_data/src/app/features/products/components/product-table/product-table.component.ts">
         <metrics statements="39" coveredstatements="27" conditionals="6" coveredconditionals="2" methods="15" coveredmethods="11"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -74,11 +74,11 @@
     </package>
     <package name="features.products.components.product-update">
       <metrics statements="35" coveredstatements="24" conditionals="5" coveredconditionals="4" methods="10" coveredmethods="6"/>
-      <file name="product-update.component.html" path="/home/chisto/Apps/Personal/Ntt Data/cramos-ntt-data-app/src/app/features/products/components/product-update/product-update.component.html">
+      <file name="product-update.component.html" path="/home/chisto/Apps/Personal/Ntt Data/ntt_data/src/app/features/products/components/product-update/product-update.component.html">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
       </file>
-      <file name="product-update.component.ts" path="/home/chisto/Apps/Personal/Ntt Data/cramos-ntt-data-app/src/app/features/products/components/product-update/product-update.component.ts">
+      <file name="product-update.component.ts" path="/home/chisto/Apps/Personal/Ntt Data/ntt_data/src/app/features/products/components/product-update/product-update.component.ts">
         <metrics statements="34" coveredstatements="23" conditionals="5" coveredconditionals="4" methods="10" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -118,7 +118,7 @@
     </package>
     <package name="features.products.services">
       <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
-      <file name="product.service.ts" path="/home/chisto/Apps/Personal/Ntt Data/cramos-ntt-data-app/src/app/features/products/services/product.service.ts">
+      <file name="product.service.ts" path="/home/chisto/Apps/Personal/Ntt Data/ntt_data/src/app/features/products/services/product.service.ts">
         <metrics statements="21" coveredstatements="21" conditionals="2" coveredconditionals="2" methods="11" coveredmethods="11"/>
         <line num="1" count="3" type="stmt"/>
         <line num="2" count="3" type="stmt"/>
